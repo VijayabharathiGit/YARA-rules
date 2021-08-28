@@ -1,0 +1,25 @@
+rule psixbot
+
+{ 
+
+meta:
+
+created = "21/08/2021 11:15:00 AM IST"
+modified = "28/08/2021 10:15:00 AM IST"
+author	= "vijayabharathi"
+description = "To find PSIXBot files using strings"
+
+strings:
+
+$str1 = "VirtualAllocEx"
+$str2 = "ModifyBootConfig"
+$str3 = "acledit.dll"
+$str4 = "crypt32.dll"
+
+
+condition:
+
+$str1 or $str2 or $str3 or $str4
+
+
+}
